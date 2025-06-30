@@ -7,7 +7,7 @@ import Button from '../components/Button';
 const Contact = () => {
     return (
         <>
-            {/* Hero Section */}
+
             <section className="relative bg-primary text-white py-32">
                 <div className="absolute inset-0 bg-black/50">
                     <img

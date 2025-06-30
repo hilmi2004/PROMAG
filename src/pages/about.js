@@ -6,30 +6,30 @@ import SectionTitle from '../components/SectionTitle';
 const About = () => {
     const teamMembers = [
         {
-            name: 'Adebayo Johnson',
-            role: 'CEO & Founder',
+            name: '',
+            role: '',
             image: '/images/team1.jpg',
         },
         {
-            name: 'Chioma Okeke',
-            role: 'CTO',
+            name: '',
+            role: '',
             image: '/images/team2.jpg',
         },
         {
-            name: 'Emeka Nwankwo',
-            role: 'Head of Agriculture',
+            name: '',
+            role: '',
             image: '/images/team3.jpg',
         },
         {
-            name: 'Funke Adeleke',
-            role: 'Telecom Director',
+            name: '',
+            role: '',
             image: '/images/team4.jpg',
         },
     ];
 
     return (
         <>
-            {/* Hero Section */}
+
             <section className="relative bg-primary text-white py-32">
                 <div className="absolute inset-0 bg-black/50">
                     <img
