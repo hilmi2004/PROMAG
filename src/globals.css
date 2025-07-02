@@ -1,62 +1,44 @@
-/*@import "../node_modules/tailwindcss/dist/lib.d.mts";*/
+
 @import "tailwindcss";
-@theme {
-  /* Color palette */
+:root {
   --color-primary: #228B22;
+  --color-primary-light: #32a852;
+  --color-primary-dark: #1a7a1a;
   --color-secondary: #1A73E8;
-  --color-light: #F4F4F4;
-  --color-background: #ffffff;
-  --color-foreground: #171717;
-
-  /* Font families */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  /* Spacing scale */
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-4: 1rem;
-  /* Add more as needed */
-
-  /* Breakpoints */
-  --screen-sm: 640px;
-  --screen-md: 768px;
-  --screen-lg: 1024px;
-}
-
-@media (prefers-color-scheme: dark) {
-  @theme {
-    --color-background: #0a0a0a;
-    --color-foreground: #ededed;
-  }
+  --color-dark: #0f172a;
+  --color-light: #f8fafc;
 }
 
 @layer base {
-  body {
-    background: var(--color-background);
-    color: var(--color-foreground);
-    font-family: var(--font-sans);
+  html {
+    @apply scroll-smooth;
   }
-
+  body {
+    @apply bg-white text-gray-800 font-sans antialiased;
+  }
   h1, h2, h3, h4 {
-    font-weight: bold;
+    @apply font-bold tracking-tight;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl;
   }
 }
 
 @layer utilities {
-  .text-primary {
-    color: var(--color-primary);
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
-  .bg-primary {
-    background-color: var(--color-primary);
+  .glass {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
   }
-  .text-secondary {
-    color: var(--color-secondary);
-  }
-  .bg-secondary {
-    background-color: var(--color-secondary);
-  }
-  .bg-light {
-    background-color: var(--color-light);
+  .glass-dark {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(15, 23, 42, 0.8);
   }
 }

@@ -13,23 +13,22 @@ export default function Home() {
         {
             icon: <FaChartLine className="text-primary text-4xl mb-4" />,
             title: 'Telecommunication',
-            description: 'Advanced telecom solutions for businesses and individuals across Nigeria.',
+            description: 'Comprehensive IT services including cybersecurity, cloud computing, and software development.',
         },
         {
             icon: <FaLeaf className="text-primary text-4xl mb-4" />,
             title: 'Agricultural Services',
-            description: 'Modern farming solutions, equipment, and consultancy services.',
-        },
-    ];
-
+            description: 'Comprehensive IT services including cybersecurity, cloud computing i believe in that',
+        },];
+//
     const testimonials = [
         {
-            name: 'John Adekunle',
-            role: 'CEO, TechSolutions Ltd',
-            content: 'Promag delivered exceptional IT infrastructure for our company. Their team is professional and knowledgeable.',
+            name: '',
+            role: '',
+            content: '',
             avatar: '/images/avatar1.jpg',
         },
-        // Add other testimonials
+
     ];
 
     const partners = [
