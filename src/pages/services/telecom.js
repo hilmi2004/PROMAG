@@ -3,38 +3,39 @@ import { motion } from 'framer-motion';
 import SectionTitle from '../../components/SectionTitle';
 import ServiceHero from '../../components/ServiceHero';
 import ServiceFeatures from '../ServiceFeatures.js';
+import Link from "next/link";
 
 const TelecomPage = () => {
     const features = [
         {
             title: "Fiber Optic Networks",
-            description: "High-speed connectivity with our state-of-the-art fiber infrastructure.",
+            description: "High-speed connectivity with our state-of-the-art fiber infrastructure and minimal latency.",
             icon: "🔌"
         },
         {
             title: "5G Solutions",
-            description: "Next-generation wireless technology for businesses.",
+            description: "Next-generation wireless technology for businesses with ultra-low latency.",
             icon: "📶"
         },
         {
             title: "VoIP Services",
-            description: "Cost-effective voice communication over IP networks.",
+            description: "Cost-effective voice communication over IP networks with crystal clear quality.",
             icon: "📞"
-        }
-    ];
-
-    const solutions = [
-        {
-            title: "Enterprise Connectivity",
-            description: "Dedicated high-bandwidth solutions for large organizations."
         },
         {
-            title: "Last-Mile Solutions",
-            description: "Bridging the connectivity gap in underserved areas."
+            title: "Enterprise Solutions",
+            description: "Dedicated connectivity solutions for large organizations with SLA guarantees.",
+            icon: "🏢"
         },
         {
-            title: "IoT Infrastructure",
-            description: "Support for smart devices and connected systems."
+            title: "IoT Connectivity",
+            description: "Specialized networks for smart devices and connected systems with edge computing.",
+            icon: "🌐"
+        },
+        {
+            title: "Network Security",
+            description: "Comprehensive protection for your communication infrastructure against threats.",
+            icon: "🔒"
         }
     ];
 
@@ -49,7 +50,7 @@ const TelecomPage = () => {
                 <div className="container mx-auto px-4">
                     <SectionTitle
                         title="Our Telecom Solutions"
-                        subtitle="Reliable, scalable, and future-ready"
+                        subtitle="Reliable, scalable, and future-ready connectivity"
                         center
                     />
 
@@ -62,18 +63,11 @@ const TelecomPage = () => {
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
                         >
-                            <h3 className="text-2xl font-bold mb-6">Nationwide Coverage</h3>
-                            <p className="text-gray-600 mb-6">
-                                Our telecommunication infrastructure spans across Nigeria, ensuring reliable connectivity even in remote areas. We're committed to bridging the digital divide with innovative solutions tailored for the Nigerian market.
+                            <h3 className="text-3xl font-bold mb-6 text-gray-900">Nationwide Coverage</h3>
+                            <p className="text-gray-700 mb-6 text-lg">
+                                Our telecommunication infrastructure spans across Nigeria, ensuring reliable connectivity even in remote areas. We're committed to bridging the digital divide with innovative solutions tailored for the Nigerian market, backed by 24/7 technical support.
                             </p>
-                            <div className="flex flex-wrap gap-4">
-                                <button className="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-dark transition-colors">
-                                    View Coverage Map
-                                </button>
-                                <button className="border border-primary text-primary px-6 py-3 rounded-md hover:bg-primary/10 transition-colors">
-                                    Download Brochure
-                                </button>
-                            </div>
+
                         </motion.div>
 
                         <motion.div
@@ -81,56 +75,30 @@ const TelecomPage = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            className="bg-gray-100 rounded-xl overflow-hidden aspect-video"
+                            className="relative rounded-2xl overflow-hidden aspect-video shadow-xl"
                         >
-                            {/* Network illustration placeholder */}
-                            <div className="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 text-white text-2xl">
-                                Network Infrastructure
+                            <img
+                                src="/telecomm.jpg"
+                                alt="Telecom Infrastructure"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/30 to-transparent flex items-end p-8">
+                                <h4 className="text-white text-xl font-semibold">Building Nigeria's Digital Backbone</h4>
                             </div>
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* Solutions Section */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <SectionTitle
-                        title="Tailored Solutions"
-                        subtitle="We customize our offerings to your specific needs"
-                        center
-                    />
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        {solutions.map((solution, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all"
-                            >
-                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl font-bold mb-4">
-                                    {index + 1}
-                                </div>
-                                <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
-                                <p className="text-gray-600">{solution.description}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* CTA Section */}
-            <section className="py-20 bg-primary text-white">
+            <section className="py-20 bg-gradient-to-r from-primary to-primary-dark text-white">
                 <div className="container mx-auto px-4 text-center">
                     <motion.h2
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-4xl font-bold mb-6"
+                        className="text-3xl text-black md:text-4xl font-bold mb-6"
                     >
                         Ready to Upgrade Your Connectivity?
                     </motion.h2>
@@ -139,9 +107,9 @@ const TelecomPage = () => {
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="text-xl mb-8 max-w-2xl mx-auto"
+                        className="text-xl mb-8 max-w-2xl mx-auto text-gray-400"
                     >
-                        Our experts will assess your needs and recommend the perfect solution.
+                        Our experts will assess your needs and recommend the perfect solution tailored to your business requirements.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -149,9 +117,10 @@ const TelecomPage = () => {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         viewport={{ once: true }}
                     >
-                        <button className="bg-white text-primary px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors">
-                            Get a Free Consultation
-                        </button>
+                        <Link href="/contact"><button className="bg-primary text-black px-10 py-4 cursor-pointer rounded-lg font-medium hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl text-lg">
+                            Get a Consultation
+                        </button></Link>
+
                     </motion.div>
                 </div>
             </section>

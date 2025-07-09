@@ -1,21 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import SectionTitle from '../components/SectionTitle';
 import Button from '../components/Button';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/gabihilmi4@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    _subject: 'New message from Promag website',
+                    _template: 'table',
+                    _captcha: 'false'
+                })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setSubmitStatus('success');
+                setFormData({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                });
+            } else {
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            setSubmitStatus('error');
+            console.error('Error:', error);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <>
-
+            {/* Hero Section */}
             <section className="relative bg-primary text-white py-32">
-                <div className="absolute inset-0 bg-black/50">
-                    <img
-                        src="/images/contact.jpg"
-                        alt="Contact Promag"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
+
                 <div className="container mx-auto px-4 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -41,64 +93,102 @@ const Contact = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            className="bg-light p-8 rounded-lg shadow-sm"
+                            className="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100"
                         >
                             <SectionTitle title="Send Us a Message" />
-                            <form className="space-y-6">
+
+                            {/* Status Messages */}
+                            {submitStatus === 'success' && (
+                                <div className="mb-6 p-4 bg-green-50 text-green-700 border border-green-100 rounded-lg">
+                                    <p className="font-medium">Thank you!</p>
+                                    <p>Your message has been sent successfully. We'll get back to you soon.</p>
+                                </div>
+                            )}
+                            {submitStatus === 'error' && (
+                                <div className="mb-6 p-4 bg-red-50 text-red-700 border border-red-100 rounded-lg">
+                                    <p className="font-medium">Something went wrong</p>
+                                    <p>Please try again later or contact us directly at info@promag.com</p>
+                                </div>
+                            )}
+
+                            <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-gray-700 mb-2">
-                                        Full Name
+                                    <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                                        Full Name *
                                     </label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                                         required
                                     />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="email" className="block text-gray-700 mb-2">
-                                        Email Address
+                                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                                        Email Address *
                                     </label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                                         required
                                     />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="subject" className="block text-gray-700 mb-2">
-                                        Subject
+                                    <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
+                                        Subject *
                                     </label>
                                     <input
                                         type="text"
                                         id="subject"
                                         name="subject"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                        value={formData.subject}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                                         required
                                     />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="message" className="block text-gray-700 mb-2">
-                                        Message
+                                    <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                                        Message *
                                     </label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         rows="5"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                                         required
                                     ></textarea>
                                 </div>
 
-                                <Button type="submit" variant="primary" className="w-full">
-                                    Send Message
+                                <Button
+                                    type="submit"
+                                    variant="primary"
+                                    className="w-full py-3 text-lg"
+                                    disabled={isSubmitting}
+                                >
+                                    {isSubmitting ? (
+                                        <span className="flex items-center justify-center">
+                                            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                            Sending...
+                                        </span>
+                                    ) : (
+                                        'Send Message'
+                                    )}
                                 </Button>
                             </form>
                         </motion.div>
@@ -158,19 +248,7 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-12">
-                                <h3 className="text-xl font-semibold mb-4">Visit Us</h3>
-                                <div className="bg-gray-200 rounded-lg overflow-hidden h-64">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.521260322283!2d3.379295415393164!3d6.452622645325475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos%20Island!5e0!3m2!1sen!2sng!4v1620000000000!5m2!1sen!2sng"
-                                        width="100%"
-                                        height="100%"
-                                        style={{ border: 0 }}
-                                        allowFullScreen=""
-                                        loading="lazy"
-                                    ></iframe>
-                                </div>
-                            </div>
+
                         </motion.div>
                     </div>
                 </div>

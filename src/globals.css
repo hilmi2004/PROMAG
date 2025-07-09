@@ -1,44 +1,68 @@
-
 @import "tailwindcss";
+
+/* 1. Define ALL colors as CSS variables */
 :root {
+  /* Greens */
   --color-primary: #228B22;
   --color-primary-light: #32a852;
   --color-primary-dark: #1a7a1a;
+
+  /* Blues */
   --color-secondary: #1A73E8;
+
+  /* Neutrals */
   --color-dark: #0f172a;
   --color-light: #f8fafc;
+
+  /* Extended palette */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
 }
 
+/* 2. Create direct utility classes for colors */
+@layer utilities {
+  /* Backgrounds */
+  .bg-primary { background-color: var(--color-primary) !important; }
+  .bg-primary-light { background-color: var(--color-primary-light) !important; }
+  .bg-primary-dark { background-color: var(--color-primary-dark) !important; }
+  .bg-secondary { background-color: var(--color-secondary) !important; }
+
+  /* Text */
+  .text-primary { color: var(--color-primary) !important; }
+  .text-secondary { color: var(--color-secondary) !important; }
+
+  /* Borders */
+  .border-primary { border-color: var(--color-primary) !important; }
+
+  /* Special Effects */
+  .glass {
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary)) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+  }
+}
+
+/* 3. Base styles (optional) */
 @layer base {
   html {
-    @apply scroll-smooth;
+    scroll-behavior: smooth;
   }
   body {
-    @apply bg-white text-gray-800 font-sans antialiased;
-  }
-  h1, h2, h3, h4 {
-    @apply font-bold tracking-tight;
+    @apply bg-white text-gray-800 antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
   }
   h2 {
-    @apply text-3xl md:text-4xl;
-  }
-}
-
-@layer utilities {
-  .text-shadow {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  .glass {
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.75);
-  }
-  .glass-dark {
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(15, 23, 42, 0.8);
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
   }
 }

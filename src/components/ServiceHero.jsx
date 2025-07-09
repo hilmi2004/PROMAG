@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 
 const ServiceHero = ({ title, subtitle }) => {
     return (
-        <section className="relative bg-gray-900 text-white py-32">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30">
+        <section className="relative bg-gray-900 text-white pt-40 pb-24">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-secondary/20">
                 <div className="absolute inset-0 bg-black/40" />
             </div>
 
@@ -12,10 +12,10 @@ const ServiceHero = ({ title, subtitle }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="max-w-3xl text-center mx-auto"
+                    className="max-w-3xl"
                 >
                     <motion.h1
-                        className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-shadow"
+                        className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
@@ -23,7 +23,7 @@ const ServiceHero = ({ title, subtitle }) => {
                         {title}
                     </motion.h1>
                     <motion.p
-                        className="text-xl md:text-2xl"
+                        className="text-xl md:text-2xl text-gray-200"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.4 }}

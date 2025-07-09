@@ -54,13 +54,13 @@ const About = () => {
                             <div className="bg-gray-100 rounded-xl overflow-hidden aspect-square">
                                 {/* CEO Image */}
                                 <img
-                                    src="/images/ceo.jpg"
+                                    src="ceopromag.jpeg"
                                     alt="Adebayo Johnson, Founder & CEO"
                                     className="w-full h-full object-cover"
                                 />
                             </div>
                             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md">
-                                <h4 className="font-bold">Adebayo Johnson</h4>
+                                <h4 className="font-bold">Garba S. Abdullahi</h4>
                                 <p className="text-sm text-gray-600">Founder & CEO</p>
                             </div>
                         </motion.div>

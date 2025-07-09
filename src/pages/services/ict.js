@@ -8,18 +8,33 @@ const ICTPage = () => {
     const features = [
         {
             title: "Cloud Solutions",
-            description: "Scalable cloud infrastructure tailored to your business needs.",
+            description: "Scalable cloud infrastructure tailored to your business needs with 99.9% uptime.",
             icon: "☁️"
         },
         {
             title: "Cybersecurity",
-            description: "Protect your business from evolving digital threats.",
+            description: "Comprehensive protection from evolving digital threats with 24/7 monitoring.",
             icon: "🛡️"
         },
         {
             title: "Software Development",
-            description: "Custom solutions built for your unique requirements.",
+            description: "Custom solutions built for your unique requirements using modern technologies.",
             icon: "💻"
+        },
+        {
+            title: "IT Consulting",
+            description: "Strategic guidance to align your technology with business objectives.",
+            icon: "📊"
+        },
+        {
+            title: "Data Analytics",
+            description: "Transform raw data into actionable insights for better decision making.",
+            icon: "📈"
+        },
+        {
+            title: "Managed Services",
+            description: "Proactive IT management to keep your systems running smoothly.",
+            icon: "⚙️"
         }
     ];
 
@@ -47,13 +62,16 @@ const ICTPage = () => {
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
                         >
-                            <h3 className="text-2xl font-bold mb-6">Tailored Technology Solutions</h3>
-                            <p className="text-gray-600 mb-6">
-                                We don't believe in one-size-fits-all solutions. Our team works closely with you to understand your unique challenges and deliver customized ICT solutions that drive real business value.
+                            <h3 className="text-3xl font-bold mb-6 text-gray-900">Digital Transformation</h3>
+                            <p className="text-gray-700 mb-6 text-lg">
+                                We don't believe in one-size-fits-all solutions. Our team works closely with you to understand your unique challenges and deliver customized ICT solutions that drive real business value and competitive advantage.
                             </p>
-                            <button className="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-dark transition-colors">
-                                Request Consultation
-                            </button>
+                            <div className="flex flex-wrap gap-4">
+                                <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition-colors font-medium shadow-md hover:shadow-lg">
+                                    Request Consultation
+                                </button>
+
+                            </div>
                         </motion.div>
 
                         <motion.div
@@ -61,11 +79,15 @@ const ICTPage = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            className="bg-gray-100 rounded-xl overflow-hidden aspect-video"
+                            className="relative rounded-2xl overflow-hidden aspect-video shadow-xl"
                         >
-                            {/* Placeholder for graphic/illustration */}
-                            <div className="w-full h-full flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white text-2xl">
-                                ICT Solutions Graphic
+                            <img
+                                src="/ictpromag.jpg"
+                                alt="ICT Solutions"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/30 to-transparent flex items-end p-8">
+                                <h4 className="text-white text-xl font-semibold">Digital Solutions for Modern Businesses</h4>
                             </div>
                         </motion.div>
                     </div>

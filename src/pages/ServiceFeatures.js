@@ -13,8 +13,10 @@ const ServiceFeatures = ({ features }) => {
                     whileHover={{ y: -5 }}
                     className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100"
                 >
-                    <div className="text-4xl mb-4">{feature.icon}</div>
-                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-2xl mb-4">
+                        {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-gray-800">{feature.title}</h3>
                     <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
             ))}
