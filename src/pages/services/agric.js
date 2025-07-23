@@ -67,14 +67,7 @@ const AgriculturePage = () => {
                             <p className="text-gray-700 mb-6 text-lg">
                                 We promote agricultural methods that increase productivity while preserving the environment. Our experts provide training and resources to help farmers adopt modern, sustainable techniques that are tailored to Nigeria's unique climate and soil conditions.
                             </p>
-                            <div className="flex flex-wrap gap-4">
-                                <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition-colors font-medium shadow-md hover:shadow-lg">
-                                    Learn About Sustainability
-                                </button>
-                                <button className="border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary/10 transition-colors font-medium">
-                                    View Case Studies
-                                </button>
-                            </div>
+
                         </motion.div>
 
                         <motion.div

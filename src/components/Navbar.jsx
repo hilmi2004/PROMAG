@@ -23,13 +23,12 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass shadow-sm py-2' : 'glass py-3'}`}>
+        <nav className={`fixed w-full  z-50 transition-all duration-300 ${scrolled ? 'glass shadow-sm ' : 'glass '}`}>
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center">
                     <Link href="/" className="text-2xl font-bold text-primary">
                         <span className="gradient-text">
-                            <img width="70"   src="/realpromaglogo.png" alt=""/>
-
+                            <img width="350"    src="/try100logo.png" alt=""/>
                         </span>
                     </Link>
 

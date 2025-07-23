@@ -66,7 +66,7 @@ const Contact = () => {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative bg-primary text-white py-32">
+            <section className="relative  py-32">
 
                 <div className="container mx-auto px-4 relative z-10">
                     <motion.div
@@ -175,7 +175,7 @@ const Contact = () => {
                                 <Button
                                     type="submit"
                                     variant="primary"
-                                    className="w-full py-3 text-lg"
+                                    className="w-full py-3 text-lg cursor-pointer"
                                     disabled={isSubmitting}
                                 >
                                     {isSubmitting ? (
@@ -209,7 +209,11 @@ const Contact = () => {
                                     <div>
                                         <h3 className="text-lg font-semibold mb-1">Headquarters</h3>
                                         <p className="text-gray-600">
-                                            123 Business Avenue, Victoria Island, Lagos, Nigeria
+                                            13 Sokoto Road GRA,Bauchi,Nigeria
+                                        </p>
+                                        <h3 className="text-lg font-semibold mb-1 mt-4">Branch</h3>
+                                        <p className="text-gray-600">
+                                            27 BNet Estate Anumba District,Abuja,Nigeria
                                         </p>
                                     </div>
                                 </div>
@@ -218,10 +222,10 @@ const Contact = () => {
                                     <div className="bg-primary/10 p-3 rounded-full mr-4">
                                         <FaPhone className="text-primary text-xl" />
                                     </div>
-                                    <div>
+                                    <div >
                                         <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                                        <p className="text-gray-600">+234 123 456 7890</p>
-                                        <p className="text-gray-600">+234 987 654 3210</p>
+                                        <p className="text-gray-600">+234 70 359 38674</p>
+                                        <p className="text-gray-600">+234 70 132 72464</p>
                                     </div>
                                 </div>
 
@@ -248,6 +252,15 @@ const Contact = () => {
                                 </div>
                             </div>
 
+                            <div className="mt-12">
+                                <h3 className="text-xl font-semibold mb-4">Visit Us</h3>
+                                <div className="rounded-xl overflow-hidden h-64 border border-gray-200 shadow-sm">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!4v1753266120715!6m8!1m7!1sgtT23nLCw63EaHoXNNVYyQ!2m2!1d10.3099480887949!2d9.816858628004121!3f342.32!4f14.060000000000002!5f0.7820865974627469"
+                                        width="600" height="450" className="object-cover w-[100%] h-[100%]"  allowFullScreen="" loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
 
                         </motion.div>
                     </div>

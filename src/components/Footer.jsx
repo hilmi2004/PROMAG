@@ -19,10 +19,12 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     <div>
                         <h3 className="text-2xl font-bold mb-4">
-                            <span className="gradient-text">Promag</span>
+                            <span className="gradient-text">
+                            <img width="150"    src="/try100logo.png" alt=""/>
+                            </span>
                         </h3>
                         <p className="text-gray-300 mb-6">
-                            Pioneering integrated services in Nigeria since 2010.
+                            Pioneering integrated services in Nigeria.
                         </p>
                         <div className="flex space-x-4">
                             {[FaFacebook, FaTwitter, FaLinkedin, FaInstagram].map((Icon, index) => (
@@ -69,11 +71,12 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
                         <address className="text-gray-300 not-italic space-y-3">
-                            <p>123 Business Avenue</p>
-                            <p>Victoria Island, Lagos</p>
+                            <p>13 Sokoto Road GRA , Bauchi , Nigeria</p>
+                            <p>27 BNet Estate Anumba District , Abuja , Nigeria</p>
                             <p>Nigeria</p>
                             <p>info@promag.com</p>
-                            <p>+234 123 456 7890</p>
+                            <p>+234 70 359 38674</p>
+                            <p></p>
                         </address>
                     </div>
                 </div>

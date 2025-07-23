@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaServer, FaNetworkWired, FaMobileAlt, FaWifi, FaTractor, FaSeedling } from 'react-icons/fa';
 import SectionTitle from '../components/SectionTitle';
 import Button from '../components/Button';
+import Link from "next/link";
 
 const Services = () => {
     const ictServices = [
@@ -125,7 +126,10 @@ const Services = () => {
                                 <p className="text-gray-600 mb-4">
                                     We understand that every business has unique technology needs. Our team works closely with you to develop tailored IT solutions that align with your specific requirements and goals.
                                 </p>
-                                <Button variant="primary">Request Consultation</Button>
+                                <Link href="/contact">
+                                    <Button variant="primary" className="cursor-pointer">Request Consultation</Button>
+
+                                </Link>
                             </div>
                             <div className="bg-gray-200 rounded-lg overflow-hidden h-64">
                                 <img

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import SectionTitle from '../../components/SectionTitle';
 import ServiceHero from '../../components/ServiceHero';
 import ServiceFeatures from '../ServiceFeatures.js';
+import Link from "next/link";
 
 const ICTPage = () => {
     const features = [
@@ -67,9 +68,12 @@ const ICTPage = () => {
                                 We don't believe in one-size-fits-all solutions. Our team works closely with you to understand your unique challenges and deliver customized ICT solutions that drive real business value and competitive advantage.
                             </p>
                             <div className="flex flex-wrap gap-4">
-                                <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition-colors font-medium shadow-md hover:shadow-lg">
+                                <Link href="/contact">
+                                    <button className="bg-primary cursor-pointer text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition-colors font-medium shadow-md hover:shadow-lg">
                                     Request Consultation
                                 </button>
+                                </Link>
+
 
                             </div>
                         </motion.div>

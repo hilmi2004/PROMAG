@@ -15,7 +15,7 @@ const Layout = ({ children, title = 'Promag - Integrated Services', description 
             </Head>
 
             <Navbar />
-            <main className="pt-20">{children}</main>
+            <main className="pt-30">{children}</main>
             <Footer />
             <ScrollToTop />
         </>

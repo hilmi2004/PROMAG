@@ -45,7 +45,7 @@ export default function Home() {
                             transition={{ duration: 0.5, delay: 0.3 }}
                             className="text-xl md:text-2xl mb-8 text-gray-500"
                         >
-                            Promag delivers innovative ICT, Telecommunication, and Agricultural services to power your digital transformation.
+                            Promag delivers innovative ICT services, Telecommunication services,  Agricultural services and other services in Nigeria.
                         </motion.p>
                         {/* In your hero section */}
                         <motion.div className="flex flex-col sm:flex-row gap-4">
@@ -194,9 +194,12 @@ export default function Home() {
                         <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-500">
                             Our experts are ready to help you leverage technology for growth and efficiency.
                         </p>
-                        <Button variant="primary" className="bg-white text-black cursor-pointer hover:bg-gray-100 shadow-lg hover:shadow-xl">
-                            Get in Touch
-                        </Button>
+                        <Link  href="/contact">
+                            <Button variant="primary" className="bg-white text-black cursor-pointer hover:bg-gray-100 shadow-lg hover:shadow-xl">
+                                Get in Touch
+                            </Button>
+                        </Link>
+
                     </motion.div>
                 </div>
             </section>

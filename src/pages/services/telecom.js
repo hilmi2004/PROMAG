@@ -8,9 +8,11 @@ import Link from "next/link";
 const TelecomPage = () => {
     const features = [
         {
-            title: "Fiber Optic Networks",
-            description: "High-speed connectivity with our state-of-the-art fiber infrastructure and minimal latency.",
-            icon: "🔌"
+
+
+            title: "Telecommunication",
+            description: "Reliable radio communication solutions for seamless connectivity across your networks and devices.",
+            icon: "🌐"
         },
         {
             title: "5G Solutions",
@@ -33,9 +35,9 @@ const TelecomPage = () => {
             icon: "🌐"
         },
         {
-            title: "Network Security",
-            description: "Comprehensive protection for your communication infrastructure against threats.",
-            icon: "🔒"
+            title: "Fiber Optic Networks",
+            description: "High-speed connectivity with our state-of-the-art fiber infrastructure and minimal latency.",
+            icon: "🔌"
         }
     ];
 
@@ -63,9 +65,9 @@ const TelecomPage = () => {
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
                         >
-                            <h3 className="text-3xl font-bold mb-6 text-gray-900">Nationwide Coverage</h3>
+                            <h3 className="text-3xl font-bold mb-6 text-gray-900">Telecommunication Coverage</h3>
                             <p className="text-gray-700 mb-6 text-lg">
-                                Our telecommunication infrastructure spans across Nigeria, ensuring reliable connectivity even in remote areas. We're committed to bridging the digital divide with innovative solutions tailored for the Nigerian market, backed by 24/7 technical support.
+                                We're committed to providing a secured telecommunication with innovative solutions tailored for Nigerian Space.
                             </p>
 
                         </motion.div>
