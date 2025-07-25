@@ -1,7 +1,7 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+// import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import Link from 'next/link';
-
+import Image from 'next/image';
 const Footer = () => {
     const currentYear = new Date().getFullYear();
 
@@ -20,23 +20,23 @@ const Footer = () => {
                     <div>
                         <h3 className="text-2xl font-bold mb-4">
                             <span className="gradient-text">
-                            <img width="150"    src="/try100logo.png" alt=""/>
+                               <Image src="/try100logo.png" alt="desc" width={150} height={100} />
                             </span>
                         </h3>
                         <p className="text-gray-300 mb-6">
                             Pioneering integrated services in Nigeria.
                         </p>
-                        <div className="flex space-x-4">
-                            {[FaFacebook, FaTwitter, FaLinkedin, FaInstagram].map((Icon, index) => (
-                                <a
-                                    key={index}
-                                    href="#"
-                                    className="text-gray-300 hover:text-white transition-colors p-2 bg-gray-800 rounded-full hover:bg-gray-700"
-                                >
-                                    <Icon size={18} />
-                                </a>
-                            ))}
-                        </div>
+                        {/*<div className="flex space-x-4">*/}
+                        {/*    {[FaFacebook, FaTwitter, FaLinkedin, FaInstagram].map((Icon, index) => (*/}
+                        {/*        <a*/}
+                        {/*            key={index}*/}
+                        {/*            href="#"*/}
+                        {/*            className="text-gray-300 hover:text-white transition-colors p-2 bg-gray-800 rounded-full hover:bg-gray-700"*/}
+                        {/*        >*/}
+                        {/*            <Icon size={18} />*/}
+                        {/*        </a>*/}
+                        {/*    ))}*/}
+                        {/*</div>*/}
                     </div>
 
                     <div>

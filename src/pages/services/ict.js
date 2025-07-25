@@ -4,7 +4,7 @@ import SectionTitle from '../../components/SectionTitle';
 import ServiceHero from '../../components/ServiceHero';
 import ServiceFeatures from '../ServiceFeatures.js';
 import Link from "next/link";
-
+import Image from 'next/image';
 const ICTPage = () => {
     const features = [
         {
@@ -65,7 +65,7 @@ const ICTPage = () => {
                         >
                             <h3 className="text-3xl font-bold mb-6 text-gray-900">Digital Transformation</h3>
                             <p className="text-gray-700 mb-6 text-lg">
-                                We don't believe in one-size-fits-all solutions. Our team works closely with you to understand your unique challenges and deliver customized ICT solutions that drive real business value and competitive advantage.
+                                We don&#39;t believe in one-size-fits-all solutions. Our team works closely with you to understand your unique challenges and deliver customized ICT solutions that drive real business value and competitive advantage.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link href="/contact">
@@ -85,11 +85,8 @@ const ICTPage = () => {
                             viewport={{ once: true }}
                             className="relative rounded-2xl overflow-hidden aspect-video shadow-xl"
                         >
-                            <img
-                                src="/ictpromag.jpg"
-                                alt="ICT Solutions"
-                                className="w-full h-full object-cover"
-                            />
+
+                            <Image src="/ictpromag.jpg" alt="desc" width={100} height={100} className="w-full h-full object-cover"/>
                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/30 to-transparent flex items-end p-8">
                                 <h4 className="text-white text-xl font-semibold">Digital Solutions for Modern Businesses</h4>
                             </div>

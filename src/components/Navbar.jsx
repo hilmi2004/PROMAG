@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import Image from 'next/image';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -28,7 +28,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center">
                     <Link href="/" className="text-2xl font-bold text-primary">
                         <span className="gradient-text">
-                            <img width="350"    src="/try100logo.png" alt=""/>
+                            <Image src="/try100logo.png" alt="desc" width={350} height={100}/>
                         </span>
                     </Link>
 

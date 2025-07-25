@@ -64,13 +64,7 @@ const Services = () => {
         <>
             {/* Hero Section */}
             <section className="relative bg-primary text-white py-32">
-                <div className="absolute inset-0 bg-black/50">
-                    <img
-                        src="/images/services.jpg"
-                        alt="Promag Services"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
+
                 <div className="container mx-auto px-4 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -131,13 +125,7 @@ const Services = () => {
 
                                 </Link>
                             </div>
-                            <div className="bg-gray-200 rounded-lg overflow-hidden h-64">
-                                <img
-                                    src="/images/ict.jpg"
-                                    alt="ICT Solutions"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
+
                         </div>
                     </motion.div>
                 </div>
@@ -185,13 +173,7 @@ const Services = () => {
                                 </p>
                                 <Button variant="primary">View Coverage Map</Button>
                             </div>
-                            <div className="bg-gray-200 rounded-lg overflow-hidden h-64 order-1 lg:order-2">
-                                <img
-                                    src="/images/telecom.jpg"
-                                    alt="Telecom Services"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
+
                         </div>
                     </motion.div>
                 </div>
@@ -239,13 +221,7 @@ const Services = () => {
                                 </p>
                                 <Button variant="primary">Learn About Our Programs</Button>
                             </div>
-                            <div className="bg-gray-200 rounded-lg overflow-hidden h-64">
-                                <img
-                                    src="/images/agriculture.jpg"
-                                    alt="Agricultural Services"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
+
                         </div>
                     </motion.div>
                 </div>

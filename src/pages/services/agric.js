@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import SectionTitle from '../../components/SectionTitle';
 import ServiceHero from '../../components/ServiceHero';
 import ServiceFeatures from '../ServiceFeatures.js';
-
+import Image from 'next/image';
 const AgriculturePage = () => {
     const features = [
         {
@@ -77,11 +77,8 @@ const AgriculturePage = () => {
                             viewport={{ once: true }}
                             className="relative rounded-2xl overflow-hidden aspect-video order-1 lg:order-2 shadow-xl"
                         >
-                            <img
-                                src="/agricpromag.jpg"
-                                alt="Smart Farming Solutions"
-                                className="w-full h-full object-cover"
-                            />
+
+                            <Image src="/agricpromag.jpg" alt="desc" width={100} height={100}  className="w-full h-full object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/30 to-transparent flex items-end p-8">
                                 <h4 className="text-white text-xl font-semibold">Smart Farming in Action</h4>
                             </div>

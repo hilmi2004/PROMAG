@@ -4,12 +4,10 @@ import SectionTitle from '../../components/SectionTitle';
 import ServiceHero from '../../components/ServiceHero';
 import ServiceFeatures from '../ServiceFeatures.js';
 import Link from "next/link";
-
+import Image from 'next/image';
 const TelecomPage = () => {
     const features = [
         {
-
-
             title: "Telecommunication",
             description: "Reliable radio communication solutions for seamless connectivity across your networks and devices.",
             icon: "🌐"
@@ -67,7 +65,7 @@ const TelecomPage = () => {
                         >
                             <h3 className="text-3xl font-bold mb-6 text-gray-900">Telecommunication Coverage</h3>
                             <p className="text-gray-700 mb-6 text-lg">
-                                We're committed to providing a secured telecommunication with innovative solutions tailored for Nigerian Space.
+                                We&#39;re committed to providing a secured telecommunication with innovative solutions tailored for Nigerian Space.
                             </p>
 
                         </motion.div>
@@ -79,13 +77,11 @@ const TelecomPage = () => {
                             viewport={{ once: true }}
                             className="relative rounded-2xl overflow-hidden aspect-video shadow-xl"
                         >
-                            <img
-                                src="/telecomm.jpg"
-                                alt="Telecom Infrastructure"
-                                className="w-full h-full object-cover"
-                            />
+                         
+
+                            <Image src="/telecomm.jpg" width={100} height={100} alt="desc" className="w-full h-full object-cover"/>
                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/30 to-transparent flex items-end p-8">
-                                <h4 className="text-white text-xl font-semibold">Building Nigeria's Digital Backbone</h4>
+                                <h4 className="text-white text-xl font-semibold">Building Nigeria&#39;s Digital Backbone</h4>
                             </div>
                         </motion.div>
                     </div>
