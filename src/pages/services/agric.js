@@ -65,7 +65,7 @@ const AgriculturePage = () => {
                         >
                             <h3 className="text-3xl font-bold mb-6 text-gray-900">Sustainable Farming Practices</h3>
                             <p className="text-gray-700 mb-6 text-lg">
-                                We promote agricultural methods that increase productivity while preserving the environment. Our experts provide training and resources to help farmers adopt modern, sustainable techniques that are tailored to Nigeria's unique climate and soil conditions.
+                                We promote agricultural methods that increase productivity while preserving the environment. Our experts provide training and resources to help farmers adopt modern, sustainable techniques that are tailored to Nigeria&#39;s unique climate and soil conditions.
                             </p>
 
                         </motion.div>

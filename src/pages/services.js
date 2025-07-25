@@ -169,7 +169,7 @@ const Services = () => {
                             <div className="order-2 lg:order-1">
                                 <h3 className="text-2xl font-semibold mb-4">Nationwide Coverage</h3>
                                 <p className="text-gray-600 mb-4">
-                                    Our telecommunication infrastructure spans across Nigeria, ensuring reliable connectivity even in remote areas. We're committed to bridging the digital divide in Nigeria.
+                                    Our telecommunication infrastructure spans across Nigeria, ensuring reliable connectivity even in remote areas. We&#39;re committed to bridging the digital divide in Nigeria.
                                 </p>
                                 <Button variant="primary">View Coverage Map</Button>
                             </div>
