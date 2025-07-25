@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../../components/SectionTitle';
 import ServiceHero from '../../components/ServiceHero';
-import ServiceFeatures from '../ServiceFeatures.js';
+import ServiceFeatures from '../../components/ServiceFeatures.js';
 import Link from "next/link";
 import Image from 'next/image';
 const ICTPage = () => {
