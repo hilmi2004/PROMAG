@@ -72,7 +72,7 @@ const Footer = () => {
                         <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
                         <address className="text-gray-300 not-italic space-y-3">
                             <p>13 Sokoto Road GRA , Bauchi , Nigeria</p>
-                            <p>27 BNet Estate Anumba District , Abuja , Nigeria</p>
+                            <p>27 BNet Estate Wumba District , Abuja , Nigeria</p>
                             <p>Nigeria</p>
                             <p>info@promag.com</p>
                             <p>+234 70 359 38674</p>

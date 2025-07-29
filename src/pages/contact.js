@@ -213,7 +213,7 @@ const Contact = () => {
                                         </p>
                                         <h3 className="text-lg font-semibold mb-1 mt-4">Branch</h3>
                                         <p className="text-gray-600">
-                                            27 BNet Estate Anumba District,Abuja,Nigeria
+                                            27 BNet Estate Wumba District,Abuja,Nigeria
                                         </p>
                                     </div>
                                 </div>
