@@ -74,7 +74,7 @@ const Footer = () => {
                             <p>13 Sokoto Road GRA , Bauchi , Nigeria</p>
                             <p>27 BNet Estate Wumba District , Abuja , Nigeria</p>
                             <p>Nigeria</p>
-                            <p>info@promag.com</p>
+                            <p>promag.integrated@gmail.com</p>
                             <p>+234 70 359 38674</p>
                             <p></p>
                         </address>

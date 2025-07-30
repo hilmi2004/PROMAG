@@ -107,7 +107,7 @@ const Contact = () => {
                             {submitStatus === 'error' && (
                                 <div className="mb-6 p-4 bg-red-50 text-red-700 border border-red-100 rounded-lg">
                                     <p className="font-medium">Something went wrong</p>
-                                    <p>Please try again later or contact us directly at info@promag.com</p>
+                                    <p>Please try again later or contact us directly at promag.integrated@gmail.com</p>
                                 </div>
                             )}
 
@@ -235,7 +235,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-semibold mb-1">Email</h3>
-                                        <p className="text-gray-600">info@promag.com</p>
+                                        <p className="text-gray-600">promag.integrated@gmail.com</p>
                                         <p className="text-gray-600">support@promag.com</p>
                                     </div>
                                 </div>
