@@ -236,7 +236,9 @@ const Contact = () => {
                                     <div>
                                         <h3 className="text-lg font-semibold mb-1">Email</h3>
                                         <p className="text-gray-600">promag.integrated@gmail.com</p>
-                                        <p className="text-gray-600">gsabdullahi@gmail.com</p>
+                                        <p className="text-gray-600">info@promag.com.ng</p>
+                                        <p className="text-gray-600">support@promag.com.ng</p>
+
                                     </div>
                                 </div>
 
